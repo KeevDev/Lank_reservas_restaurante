@@ -1,7 +1,4 @@
 
-
-
-
 body{
     margin: 0;
     padding: 0;
@@ -9,10 +6,8 @@ body{
 }
 
 .box-header{
-    width: 100%; 
-    height: 147px; 
-    left: 0px; 
-    top: 0px; 
+    width: 100%;
+    height: 80px;
     position: absolute; 
     background: black; 
     border-bottom: 6px #FDAB84 solid;
@@ -20,13 +15,13 @@ body{
 }
 
 h1{
-    width: 330px; 
+    width: 180px; 
     height: 73px; 
     left: 15px; 
     top: 5px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 96px; 
+    font-size: 40px; 
     font-family: Gideon Roman; 
     font-weight: 400; 
     word-wrap: break-word
@@ -35,11 +30,11 @@ h1{
 h2{
     width: 531px; 
     height: 61px; 
-    left: 20px; 
-    top: 90px; 
+    left: 15px; 
+    top: 45px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Encode Sans Expanded; 
     font-weight: 400; 
     word-wrap: break-word
@@ -47,10 +42,10 @@ h2{
 
 
 .box-header img{
-    width: 109px; 
-    height: 109px; 
+    width: 65px; 
+    height: 65px; 
     right: 10px; 
-    top: 14px; 
+    top: 8px; 
     position: absolute
 }
 
@@ -61,12 +56,11 @@ h2{
 .login{
     width: 119px; 
     height: 44px; 
-    right: 155px; 
-    top: 51px; 
-    position: 
-    absolute; 
+    right: 40px; 
+    top: 30px; 
+    position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Encode Sans Expanded; 
     font-weight: 400; 
     word-wrap: break-word;
@@ -75,21 +69,21 @@ h2{
 }
 .login:hover{
     color: #d8794d;
-    font-size: 38px;
+    font-size: 22px;
     
 }
 
 .box-header-selection{
-    width: 100%; 
-    height: 91px; 
-    left: 0px; 
-    top: 147px; 
+    width: 100%;
+    height: 42px;
+    flex-shrink: 0;
+    top: 85px; 
     position: absolute; 
     background: black;
     
 }
 .box{
-    top: 25px;
+    top: 9px;
     left: 20px;
     
 }
@@ -100,7 +94,7 @@ h2{
 .inicio{
     position: absolute; 
     color: #FDAB84;
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word;
@@ -113,10 +107,10 @@ h2{
 }
 
 .Nosotros{
-    left: 156px; 
+    left: 110px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word"
@@ -126,10 +120,10 @@ h2{
     color: #FDAB84
 }
 .Chef{
-    left: 350px; 
+    left: 220px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word
@@ -142,10 +136,10 @@ h2{
 
 
 .Menu{
-    left: 500px; 
+    left: 300px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word"
@@ -157,10 +151,10 @@ h2{
 }
 
 .Contacto{
-    left: 670px; 
+    left: 390px; 
     position: absolute; 
     color: #FDAB84; 
-    font-size: 36px; 
+    font-size: 20px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word"
@@ -173,36 +167,37 @@ h2{
 
 .box a:hover{
     color: #d8794d;
-    font-size: 40px;
+    font-size: 22px;
+    
 }
 
 .banner{
     width: 100%;
-    height: 690px;
-    left: -3px; 
-    top: 86px; 
+    height: 900px;
+    left: 0; 
+    top: -150px; 
     position: absolute
 }
 
 .mensaje{
     width: 1135px; 
     height: 95px; 
-    left: 400px; 
-    top: 435px; 
+    left: 350px; 
+    top: 220px; 
     position: absolute; 
     color: white; 
-    font-size: 72px; 
+    font-size: 40px; 
     font-family: Jacques Francois; 
     font-weight: 400; 
     word-wrap: break-word"
 }
 
 .submensaje{
-    left: 720px; 
-    top: 530px; 
+    left: 540px; 
+    top: 290px; 
     position: absolute; 
     color: white; 
-    font-size: 40px; 
+    font-size: 20px; 
     font-family: Forum; 
     font-weight: 400; 
     word-wrap: break-word
@@ -210,17 +205,18 @@ h2{
 
 
 .boton-reserva{
-    width: 467px; 
-    height: 86px; 
-    left: 620px; 
-    top: 630px; 
+    width: 467px;
+    height: 86px;
+    flex-shrink: 0;
+    left: 430px; 
+    top: 340px; 
     position: absolute
 }
 
 
 
 .boton{
-    width: 467px; 
+    width: 348px; 
     height: 86px; 
     left: 0px; 
     top: 0px; 
@@ -236,7 +232,7 @@ h2{
 .texto-boton{
     width: 279.47px; 
     height: 54.51px; 
-    left: 125px; 
+    left: 70px; 
     top: 25px; 
     position: absolute; 
     color: #FDAB84; 
