@@ -61,7 +61,7 @@ h2{
 .login{
     width: 119px; 
     height: 44px; 
-    right: 140px; 
+    right: 155px; 
     top: 51px; 
     position: 
     absolute; 
@@ -69,8 +69,14 @@ h2{
     font-size: 36px; 
     font-family: Encode Sans Expanded; 
     font-weight: 400; 
-    word-wrap: break-word
+    word-wrap: break-word;
+    transition: all 0.4s;
 
+}
+.login:hover{
+    color: #d8794d;
+    font-size: 38px;
+    
 }
 
 .box-header-selection{
