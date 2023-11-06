@@ -1,6 +1,11 @@
+
+
+
+
 body{
     margin: 0;
     padding: 0;
+    
 }
 
 .box-header{
@@ -168,7 +173,7 @@ h2{
 .mensaje{
     width: 1135px; 
     height: 95px; 
-    left: 400px; 
+    left: 500px; 
     top: 435px; 
     position: absolute; 
     color: white; 
