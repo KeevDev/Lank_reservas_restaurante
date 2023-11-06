@@ -46,20 +46,26 @@ body{
     background: black;
     
 }
-
+.box-header-selection box{
+    top: 20px;
+}
 
 .inicio{
     left: 0px; 
-    top: 0; 
+     
     position: absolute; 
     color: #FDAB84;
     font-size: 36px; 
     font-family: Droid Sans; 
     font-weight: 400; 
     word-wrap: break-word;
-    text-decoration: none
+   
 }
 
+.inicio a{
+    text-decoration: none;
+    color: #FDAB84
+}
 
 
 .banner{
