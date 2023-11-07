@@ -4,8 +4,7 @@ body{
     padding: 0;
     
 }
-
-.box-header{
+header{
     width: 100%;
     height: 80px;
     position: absolute; 
@@ -13,6 +12,12 @@ body{
     border-bottom: 6px #FDAB84 solid;
     z-index: 34;
 }
+
+.box-header{
+
+}
+
+
 
 h1{
     width: 180px; 
@@ -40,7 +45,6 @@ h2{
     word-wrap: break-word
 }
 
-
 .box-header img{
     width: 65px; 
     height: 65px; 
@@ -54,9 +58,9 @@ h2{
 }
 
 .login{
-    width: 119px; 
-    height: 44px; 
-    right: 40px; 
+    width: 70px; 
+    height: 20px; 
+    right: 90px; 
     top: 30px; 
     position: absolute; 
     color: #FDAB84; 
@@ -65,6 +69,7 @@ h2{
     font-weight: 400; 
     word-wrap: break-word;
     transition: all 0.4s;
+    
 
 }
 .login:hover{
@@ -72,118 +77,61 @@ h2{
     font-size: 22px;
     
 }
+/* fin primer header*/
 
-.box-header-selection{
+.list-selection{
     width: 100%;
     height: 42px;
-    flex-shrink: 0;
     top: 85px; 
     position: absolute; 
     background: black;
-    
-}
-.box{
-    top: 9px;
-    left: 20px;
-    
-}
-.box a{
-    transition: all 0.4s;
+    position: absolute;
 }
 
+
+.list-selection li{
+    display: inline;
+    margin: 0 0 0 35px;
+    
+}
 .inicio{
-    position: absolute; 
-    color: #FDAB84;
-    font-size: 20px; 
-    font-family: Droid Sans; 
-    font-weight: 400; 
-    word-wrap: break-word;
-   
+    left: 10px;
 }
 
-.inicio a{
+.list-selection ul{
+    margin-top: 10px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #FDAB84;;
+    font-weight: bold;
+    font-size: 20px;
     text-decoration: none;
-    color: #FDAB84
-}
+    transition: all 0.5s;
 
-.Nosotros{
-    left: 110px; 
-    position: absolute; 
-    color: #FDAB84; 
-    font-size: 20px; 
-    font-family: Droid Sans; 
-    font-weight: 400; 
-    word-wrap: break-word"
 }
-.Nosotros a{
-    text-decoration: none;
-    color: #FDAB84
-}
-.Chef{
-    left: 220px; 
-    position: absolute; 
-    color: #FDAB84; 
-    font-size: 20px; 
-    font-family: Droid Sans; 
-    font-weight: 400; 
-    word-wrap: break-word
-}
-
-.Chef a{
-    text-decoration: none;
-    color: #FDAB84
-}
-
-
-.Menu{
-    left: 300px; 
-    position: absolute; 
-    color: #FDAB84; 
-    font-size: 20px; 
-    font-family: Droid Sans; 
-    font-weight: 400; 
-    word-wrap: break-word"
-}
-
-.Menu a{
-    text-decoration: none;
-    color: #FDAB84
-}
-
-.Contacto{
-    left: 390px; 
-    position: absolute; 
-    color: #FDAB84; 
-    font-size: 20px; 
-    font-family: Droid Sans; 
-    font-weight: 400; 
-    word-wrap: break-word"
-}
-
-.Contacto a{
-    text-decoration: none;
-    color: #FDAB84
-}
-
-.box a:hover{
-    color: #d8794d;
+nav a:hover{
+    color: #C78C19;
     font-size: 22px;
     
 }
 
 .banner{
     width: 100%;
-    height: 900px;
+    height: 100vh;
     left: 0; 
-    top: -150px; 
+    top: 0; 
     position: absolute
 }
 
 .mensaje{
-    width: 1135px; 
-    height: 95px; 
-    left: 350px; 
-    top: 220px; 
+    
+    width: 540px; 
+    height: 40px; 
+    
+    margin: 50vh 30vw;
+    
     position: absolute; 
     color: white; 
     font-size: 40px; 
@@ -191,28 +139,65 @@ h2{
     font-weight: 400; 
     word-wrap: break-word"
 }
+@keyframes fade {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+    
+}
+@keyframes fade-reverse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.5;
+    }
+    
+}
 
 .submensaje{
-    left: 540px; 
-    top: 290px; 
+    
+    width: 145px;
+    margin: 60vh 45vw;
     position: absolute; 
     color: white; 
     font-size: 20px; 
     font-family: Forum; 
     font-weight: 400; 
-    word-wrap: break-word
+    word-wrap: break-word;
+    animation: fade 4s ease-in-out infinite;
+    animation: fade-reverse 4s ease-in-out infinite;
 }
 
+
+
+
+.submensaje:load{
+    opacity: 1;
+}
+body .boton-reserva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que la caja siempre esté centrada verticalmente */
+    margin: 0;
+}
 
 .boton-reserva{
     width: 467px;
     height: 86px;
     flex-shrink: 0;
-    left: 430px; 
-    top: 340px; 
     position: absolute
 }
-
 
 
 .boton{
@@ -241,4 +226,5 @@ h2{
     font-weight: 600; 
     word-wrap: break-word
 }
+
 
