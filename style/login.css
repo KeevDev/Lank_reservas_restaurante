@@ -191,6 +191,7 @@ main{
     color: #FDAB84;
     border-radius: 6px;
     font-size: 1.4vw;
+    cursor: pointer;
 }
 
 .login-button:hover{

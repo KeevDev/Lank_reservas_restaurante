@@ -127,4 +127,22 @@ main{
     background: black;
     position: absolute;
     border-radius: 48px;
+    
+}
+
+.box img{
+    border-radius: 10px;
+    left: 13vw;
+    top: 5vh;
+    width: 24vw;
+    height: 50vh;
+    position: absolute;
+}
+
+.box p{
+    left: 18vw;
+    top: 56vh;
+    font-size: 2vw;
+    position: absolute;
+    color: #FDAB84;
 }

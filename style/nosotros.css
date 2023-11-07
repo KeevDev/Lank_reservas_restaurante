@@ -129,3 +129,29 @@ main{
     position: absolute;
     border-radius: 48px;
 }
+
+.box h2{
+    top: 10px;
+    left: 20px;
+    
+    color: #FDAB84;
+    font-size: 3vw;
+    width: 19vw;
+    height: 8vh;
+    position: absolute;
+}
+
+.p{
+    color: #FDAB84;
+    margin: 12vh 5vh ;
+    
+}
+
+
+.p p{
+    color: #FDAB84;
+    margin-top: 10px;
+    font-size: 1.5vw;
+    text-align: justify;
+   
+}

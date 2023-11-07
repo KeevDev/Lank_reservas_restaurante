@@ -128,3 +128,59 @@ main{
     position: absolute;
     border-radius: 48px;
 }
+
+.box h2{
+    position: absolute;
+    color: #FDAB84;
+    top: 1vh;
+    left: 44vh;
+    font-size: 3vw;
+}
+
+.box p{
+    position: absolute;
+    color: #FDAB84;
+    
+    top: 10vh;
+    left: 14vh;
+    width: 40vw;
+    font-size: 1.5vw;
+}
+
+.box form{
+    position: absolute;
+    top: 11vw;
+}
+
+.box input{
+    
+}
+#nombre{
+    position: absolute;
+    display: block;
+    top: 0vh;
+    left: 6vw;
+}
+#email{
+    position: absolute;
+    display: block;
+    top: 10vh;
+    left: 6vw;
+}
+
+.box textarea{
+    position: absolute;
+    top: -0.5vh;
+    left: 29vw;
+    width: 17vw;
+    height: 14vh;
+    max-width: 20vw;
+    max-height: 20vh;
+}
+
+.box button{
+    position: absolute;
+    top: 30vh;
+    left: 23vw;
+    cursor: pointer;
+}

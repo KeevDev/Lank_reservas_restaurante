@@ -128,3 +128,13 @@ main{
     position: absolute;
     border-radius: 48px;
 }
+
+
+.box img{
+    position: absolute;
+    width: 30vw;
+    height: 68vh;
+    left: 10vw;
+    top: -2vh;
+    box-shadow: 10px 5px 20px;
+}
