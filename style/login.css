@@ -115,10 +115,10 @@ main{
 }
 
 .box{
-    width: 50vw;
+    width: 45vw;
     height: 64vh;
     top: 150px;
-    left: 24vw;
+    left: 29vw;
     background: black;
     position: absolute;
     border-radius: 48px;
@@ -127,13 +127,13 @@ main{
 .box img{
     width: 6vw; 
     height: 6vw; 
-    left: 22vw; 
+    left: 20vw; 
     top: 8px; 
     position: absolute
 }
 
 .entrada-user input{
-    left: 6vw;
+    left: 4vw;
     top: 22vh;
     width: 37.5vw;
     position: absolute;
@@ -151,7 +151,7 @@ main{
 
 
 .entrada-password input{
-    left: 6vw;
+    left: 4vw;
     top: 35vh;
     width: 37.5vw;
     position: absolute;
@@ -174,16 +174,16 @@ main{
     background-color: #FDAB84;
 }
 .uno{
-    left: 6vw;
+    left: 4vw;
     top: 25vh;
 }
 .dos{
-    left: 6vw;
+    left: 4vw;
     top: 38vh;
 }
 
 .login-button{
-    left: 20vw;
+    left: 18vw;
     top: 49vh;
     width: 10vw;
     position: absolute;
@@ -200,9 +200,10 @@ main{
 }
 
 form a{
-    left: 20.5vw;
+    left: 18.3vw;
     top: 57vh;
     width: 10vw;
+    font-size: 1.4vw;
     position: absolute;
     text-decoration: none;
     color: #FDAB84;
