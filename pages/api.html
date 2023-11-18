@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../style/reset.css">
+        <link rel="stylesheet" type="text/css" href="../style/api.css">
+        <script src="../scripts/api.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LANK RESTAURANTE</title>
+        <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
+    </head>
+    <body>
+        <header>
+            <div class="box-header">
+                <a href="../index.html">
+                    <h1>LANK</h1>
+                    <h2>RESTAURANTE</h2>
+                </a>
+                
+        </header>
+        <main>
+            
+            <div class="box">
+                <h3>CREAR RESERVA</h3>
+                <div class="contador">
+                    <p>Numero de personas</p>
+                    <input type="number" name="contador" id="count_personas">
+                </div>
+                <div class="opciones">
+                    <label for="opcion">Selecciona una Opción:</label>
+                <select id="opcion" name="opcion">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                </select>
+                </div>
+                <div class="fecha">
+                    <p>Fecha</p>
+                    <input id="fecha" type="date">
+                </div>
+                <div class="hora">
+                    <p>Hora</p>
+                    <input id="hora" type="time">
+                </div>
+                <button onclick="actualizarYGuardarJSON()" id="f">
+                    RESERVAR
+                </button>
+                
+            </div>
+        </main>         
+    </body>
+</html>
