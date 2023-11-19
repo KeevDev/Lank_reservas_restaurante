@@ -33,8 +33,9 @@ function actualizarYGuardarJSON() {
             miJson.hora = hora;
 
         // Convertir el objeto JSON actualizado a una cadena JSON
-        var jsonActualizado = JSON.stringify(miJson);
-        console.log(jsonActualizado);
+            var jsonActualizado = JSON.stringify(miJson);
+            console.log(jsonActualizado);
+            alert("Reserva hecha con exito");
         }else{
             alert("Debe llenar todos los campos");
         }
