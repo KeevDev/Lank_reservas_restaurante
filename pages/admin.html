@@ -5,12 +5,10 @@
         <link rel="stylesheet" type="text/css" href="../style/reset.css">
         <link rel="stylesheet" type="text/css" href="../style/api.css">
         <script src="../scripts/api.js"></script>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
         var urlParams = new URLSearchParams(window.location.search);
-        var miVariableRecuperada = urlParams.get('user');
-        </script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        var miVariableRecuperada = urlParams.get('user');</script>
         <title>LANK RESTAURANTE</title>
         <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     </head>
@@ -22,7 +20,7 @@
                     <h2>RESTAURANTE</h2>
                 </a>
             </div>
-            <h3 id="valorVariable"></h3>
+            <h3 id="valorVariable">"miVariableRecuperada"</h3>
             <script>
                 // Acceder al elemento y asignar el valor de miVariableRecuperada
                 var elementoValorVariable = document.getElementById('valorVariable');
@@ -35,7 +33,7 @@
                 <h3>CREAR RESERVA</h3>
                 <div class="contador">
                     <p>Numero de personas</p>
-                    <input type="number" name="contador" id="count_personas">
+                    <input type="number" name="contador" id="count_personas" required>
                 </div>
                 <div class="opciones">
                     <label for="opcion">Selecciona una Opción:</label>
@@ -45,8 +43,7 @@
                         <option value="opcion3">Personalizada</option>
                     </select>
                     
-                    <select id="eventoPersonalizado" name="eventoPersonalizado" disabled="true">
-                    
+                    <select id="eventoPersonalizado" name="eventoPersonalizado" disabled="true" value="None">
                         <option value="none"></option>
                         <option value="cumpleanos">Cumpleaños</option>
                         <option value="graduacion">Graduación</option>
@@ -68,11 +65,11 @@
                 </div>
                 <div class="fecha">
                     <p>Fecha</p>
-                    <input id="fecha" type="date">
+                    <input id="fecha" type="date" required>
                 </div>
                 <div class="hora">
                     <p>Hora</p>
-                    <input id="hora" type="time">
+                    <input id="hora" type="time" required>
                 </div>
                 <button onclick="actualizarYGuardarJSON()" id="f">
                     RESERVAR
