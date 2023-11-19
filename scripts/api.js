@@ -32,12 +32,8 @@ function actualizarYGuardarJSON() {
 
         // Convertir el objeto JSON actualizado a una cadena JSON
         var jsonActualizado = JSON.stringify(miJson);
-
-        // Establecer el cuerpo de la respuesta en Postman
-        pm.response.setBody(jsonActualizado);
-
-        // Finalizar la ejecución de la solicitud en Postman
-        postman.setNextRequest(null);
+        console.log(jsonActualizado);
+        
     });
 }
 
