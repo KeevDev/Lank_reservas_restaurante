@@ -41,7 +41,7 @@ function actualizarYGuardarJSON() {
             // Convertir el objeto JSON actualizado a una cadena JSON
                 var jsonActualizado = JSON.stringify(miJson);
                 console.log(jsonActualizado);
-                alert("Reserva exitosa!!!");
+                alert("¡Reserva Exitosa!");
             }else{
                 alert("Debe llenar todos los campos");
             };
