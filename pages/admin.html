@@ -5,10 +5,12 @@
         <link rel="stylesheet" type="text/css" href="../style/reset.css">
         <link rel="stylesheet" type="text/css" href="../style/api.css">
         <script src="../scripts/api.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script>
         var urlParams = new URLSearchParams(window.location.search);
-        var miVariableRecuperada = urlParams.get('user');</script>
+        var miVariableRecuperada = urlParams.get('user');
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LANK RESTAURANTE</title>
         <link rel="icon" href="../img/logo.jpeg" type="image/jpeg">
     </head>
@@ -20,11 +22,11 @@
                     <h2>RESTAURANTE</h2>
                 </a>
             </div>
-            <h3 id="valorVariable">"miVariableRecuperada"</h3>
+            <h3 id="valorVariable"></h3>
             <script>
                 // Acceder al elemento y asignar el valor de miVariableRecuperada
                 var elementoValorVariable = document.getElementById('valorVariable');
-                elementoValorVariable.textContent = 'Cliente | ' + miVariableRecuperada;
+                elementoValorVariable.textContent = 'Administrador | ' + miVariableRecuperada;
             </script>
         </header>
         <main>
@@ -33,11 +35,11 @@
                 <h3>CREAR RESERVA</h3>
                 <div class="contador">
                     <p>Numero de personas</p>
-                    <input type="number" name="contador" id="count_personas" required>
+                    <input type="number" name="contador" id="count_personas">
                 </div>
                 <div class="opciones">
                     <label for="opcion">Selecciona una Opción:</label>
-                <select id="opcion" name="opcion" required>
+                <select id="opcion" name="opcion">
                     <option value="opcion1">Sencilla</option>
                     <option value="opcion2">Ejecutiva</option>
                     <option value="opcion3">Personalizada</option>
@@ -45,11 +47,11 @@
                 </div>
                 <div class="fecha">
                     <p>Fecha</p>
-                    <input id="fecha" type="date" required>
+                    <input id="fecha" type="date">
                 </div>
                 <div class="hora">
                     <p>Hora</p>
-                    <input id="hora" type="time" required>
+                    <input id="hora" type="time">
                 </div>
                 <button onclick="actualizarYGuardarJSON()" id="f">
                     RESERVAR

@@ -1,6 +1,7 @@
 var urlParams = new URLSearchParams(window.location.search);
 var miVariableRecuperada = urlParams.get('variable');
 
+
 function cargarJSON(callback) {
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
@@ -24,21 +25,24 @@ function actualizarYGuardarJSON() {
         var hora = document.getElementById("hora").value;
 
         // Actualizar los valores del objeto JSON
-        miJson.user = user;  // Cambié esto de count a user ya que parecía un error
-        miJson.numero_personas = count;
-        miJson.tipo_reserva = opcion;
-        miJson.fecha = fecha;
-        miJson.hora = hora;
+        if (count != '' && opcion != '' && fecha != '' && hora != ''){
+            miJson.user = user;  // Cambié esto de count a user ya que parecía un error
+            miJson.numero_personas = count;
+            miJson.tipo_reserva = opcion;
+            miJson.fecha = fecha;
+            miJson.hora = hora;
 
         // Convertir el objeto JSON actualizado a una cadena JSON
         var jsonActualizado = JSON.stringify(miJson);
         console.log(jsonActualizado);
+        }else{
+            alert("Debe llenar todos los campos");
+        }
+        
         
     });
 }
 
-
-
-                    
+              
             
         

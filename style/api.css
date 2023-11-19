@@ -40,7 +40,11 @@ h2{
     word-wrap: break-word
 }
 
-
+#valorVariable{
+    margin-left: 75vw;
+    margin-top:5vh;
+    position: absolute;
+}
 
 .box-header a{
     text-decoration: none;
@@ -59,7 +63,7 @@ main{
 .box{
     width: 45vw;
     height: 64vh;
-    top: 150px;
+    top: 140px;
     left: 29vw;
     background: black;
     position: absolute;
@@ -91,7 +95,7 @@ p{
 
 .opciones{
     margin-left: 22vw;
-    margin-top: -7vh;
+    margin-top: -4vh;
     position: absolute;
     
 }
@@ -109,7 +113,7 @@ p{
 
 .fecha{
     margin-left: 2vw;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 .fecha input{
     background: transparent;
@@ -119,12 +123,13 @@ p{
 .hora{
     margin-left: 22vw;
     position: absolute;
-    margin-top: -8vh;
+    margin-top: -7.5vh;
 }
 .hora input{
-    background: transparent;
+    background-color: transparent;
     color: #FDAB84;
     border-color: #FDAB84;
+    
 }
 
 button{
@@ -132,7 +137,6 @@ button{
     margin-top: 7vh;
     width: 9vw; 
     height: 5vh; 
-    
     background: #003746; 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
     border-radius: 15px; 

@@ -3,28 +3,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const contrasenaInput = document.getElementById('contrasena');
     const iniciarSesionButton = document.getElementById('boton');
 
-    
-    
-    function abrirOtraPagina() {
-        // Especifica la URL de la otra página que quieres abrir
-        var otraPaginaURL = '../pages/api.html';
+    const administradores = { 
+        "Laura" : "123*",
+        "Kev" : "0000",
+        "Nata" : "456*"
+    };
 
-        // Abre la otra página en una nueva ventana o pestaña
-        window.open(otraPaginaURL, '');
+    function abrirUsuario(usuario) {
+        var pagina = '../pages/api.html';
+        window.open(`${pagina}?user=${encodeURIComponent(usuario)}`, '');    
     }
-        iniciarSesionButton.addEventListener('click', function() {
-            const usuario = usuarioInput.value.trim();
-            const contrasena = contrasenaInput.value.trim();
-            var miVariable = usuarioInput.value;
-            window.location.href = '../pages/api.html?variable=' + encodeURIComponent(miVariable);
-            if (usuario !== '' && contrasena !== ''){
-                alert('Has iniciado sesión');
-                abrirOtraPagina();
-                console.log(usuario + '' + contrasena )
-            }else{
-                
-                console.log("No entro")
-            }
-        });
+
+    function abrirAdmin(usuario) {
+        var pagina = '../pages/admin.html';
+        window.open(`${pagina}?user=${encodeURIComponent(usuario)}`, '');
+    }
     
+
+    function esAdmin(usuario, contrasena){
+        for (var user in administradores) {
+            if (usuario === user && contrasena === administradores[user]){
+                return true;
+            }     
+        }
+        return false;
+    }
+
+    iniciarSesionButton.addEventListener('click', function() {
+        const usuario = usuarioInput.value.trim();
+        const contrasena = contrasenaInput.value.trim();
+
+        if (esAdmin(usuario, contrasena)){
+            alert('Iniciaste sesión como administrador');
+            abrirAdmin(usuario);
+        } else if (usuario !== '' && contrasena !== ''){
+            alert('Has iniciado sesión');
+            abrirUsuario(usuario);
+            console.log(usuario + ' ' + contrasena );
+        } else {
+            console.log("No entro");
+        }
+    });
 });
