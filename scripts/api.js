@@ -1,9 +1,6 @@
-
 var urlParams = new URLSearchParams(window.location.search);
 var miVariableRecuperada = urlParams.get('variable');
 
-// Usar la variable en la segunda página
-console.log(miVariableRecuperada);
 function cargarJSON(callback) {
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
@@ -13,7 +10,7 @@ function cargarJSON(callback) {
             callback(xhr.responseText);
         }
     };
-xhr.send(null);
+    xhr.send(null);
 }
 
 function actualizarYGuardarJSON() {
@@ -25,8 +22,9 @@ function actualizarYGuardarJSON() {
         var opcion = document.getElementById("opcion").value;
         var fecha = document.getElementById("fecha").value;
         var hora = document.getElementById("hora").value;
-        // Actualizar el valor de la clave "nombre"
-        miJson.user = count;
+
+        // Actualizar los valores del objeto JSON
+        miJson.user = user;  // Cambié esto de count a user ya que parecía un error
         miJson.numero_personas = count;
         miJson.tipo_reserva = opcion;
         miJson.fecha = fecha;
@@ -35,9 +33,11 @@ function actualizarYGuardarJSON() {
         // Convertir el objeto JSON actualizado a una cadena JSON
         var jsonActualizado = JSON.stringify(miJson);
 
-        // Aquí deberías enviar jsonActualizado al servidor y manejar la escritura en el archivo en el servidor
-        // Pero en el lado del cliente, solo puedes mostrarlo en la consola
-        console.log(jsonActualizado);
+        // Establecer el cuerpo de la respuesta en Postman
+        pm.response.setBody(jsonActualizado);
+
+        // Finalizar la ejecución de la solicitud en Postman
+        postman.setNextRequest(null);
     });
 }
 
