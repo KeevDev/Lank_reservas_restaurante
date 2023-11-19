@@ -103,6 +103,12 @@ p{
     background: transparent;
     color: #FDAB84;
     border-color: #FDAB84;
+    
+}
+#eventoPersonalizado{
+    margin-left: 13.5vw;
+    margin-top: 1vh;
+    
 }
 
 .box label{

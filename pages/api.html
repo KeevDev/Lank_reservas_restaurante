@@ -37,11 +37,31 @@
                 </div>
                 <div class="opciones">
                     <label for="opcion">Selecciona una Opción:</label>
-                <select id="opcion" name="opcion" required>
-                    <option value="opcion1">Sencilla</option>
-                    <option value="opcion2">Ejecutiva</option>
-                    <option value="opcion3">Personalizada</option>
-                </select>
+                    <select id="opcion" name="opcion" required onchange="mostrarOpcionesPersonalizadas()">
+                        <option value="opcion1">Sencilla</option>
+                        <option value="opcion2">Ejecutiva</option>
+                        <option value="opcion3">Personalizada</option>
+                    </select>
+                    
+                    <select id="eventoPersonalizado" name="eventoPersonalizado" disabled="true">
+                    
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="graduacion">Graduación</option>
+                    </select>
+                
+                    <script>
+                        function mostrarOpcionesPersonalizadas() {
+                            var selectOpcion = document.getElementById("opcion");
+                            var selectEventoPersonalizado = document.getElementById("eventoPersonalizado");
+                
+                            if (selectOpcion.value === "opcion3") {
+                                selectEventoPersonalizado.disabled = false;
+                            } else {
+                                selectEventoPersonalizado.disabled = true;
+                                selectEventoPersonalizado.value = "None";
+                            }
+                        }
+                    </script>
                 </div>
                 <div class="fecha">
                     <p>Fecha</p>
