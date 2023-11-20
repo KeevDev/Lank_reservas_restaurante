@@ -36,8 +36,9 @@
                     <input type="number" name="contador" id="count_personas" required>
                 </div>
                 <div class="opciones">
-                    <label for="opcion">Selecciona una Opción:</label>
+                    <label for="opcion">Seleccione un tipo:</label>
                     <select id="opcion" name="opcion" required onchange="mostrarOpcionesPersonalizadas()">
+                        <option value="opcion"></option>
                         <option value="opcion1">Sencilla</option>
                         <option value="opcion2">Ejecutiva</option>
                         <option value="opcion3">Personalizada</option>
@@ -48,7 +49,23 @@
                         <option value="cumpleanos">Cumpleaños</option>
                         <option value="graduacion">Graduación</option>
                     </select>
-                
+                    <p class="zona">Zona</p>
+                    <select id="zona" name="zona" required>
+                        <option value="opcion"></option>
+                        <option value="opcion1">Salon interior</option>
+                        <option value="opcion2">Terraza</option>
+                        <option value="opcion3">Salon exterior</option>
+                    </select>
+                    <p class="mesa">Mesa</p>
+                    <select id="mesa" name="mesa" required>
+                        <option value="opcion"></option>
+                        <option value="opcion1">1</option>
+                        <option value="opcion2">2</option>
+                        <option value="opcion3">3</option>
+                        <option value="opcion4">4</option>
+                        <option value="opcion5">5</option>
+                    </select>
+
                     <script>
                         function mostrarOpcionesPersonalizadas() {
                             var selectOpcion = document.getElementById("opcion");
@@ -62,6 +79,7 @@
                             }
                         }
                     </script>
+
                 </div>
                 <div class="fecha">
                     <p>Fecha</p>
@@ -76,6 +94,7 @@
                 </button>
                 
             </div>
+            <a href="../pages/contacto.html"><img class="call" src="../img/auricular-phone-symbol-in-a-circle_icon-icons.com_56570.png" alt="call"></a>
         </main>         
     </body>
 </html>

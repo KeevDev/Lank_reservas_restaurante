@@ -81,13 +81,13 @@ h3{
 .contador{
     margin-top: 5vw;
     margin-left: 2vw;
-    width: fit-content;
+    
+    
 }
 p{
     color: #FDAB84;
 }
 .contador input{
-    margin-top: 1vh;
     background: transparent;
     color: #FDAB84;
     border-color: #FDAB84;
@@ -95,7 +95,7 @@ p{
 
 .opciones{
     margin-left: 22vw;
-    margin-top: -4vh;
+    margin-top: -7.5vh;
     position: absolute;
     
 }
@@ -106,7 +106,7 @@ p{
     
 }
 #eventoPersonalizado{
-    margin-left: 13.5vw;
+    margin-left: 10.6vw;
     margin-top: 1vh;
     
 }
@@ -127,7 +127,7 @@ p{
     border-color: #FDAB84;
 }
 .hora{
-    margin-left: 22vw;
+    margin-left: 15vw;
     position: absolute;
     margin-top: -7.5vh;
 }
@@ -136,6 +136,44 @@ p{
     color: #FDAB84;
     border-color: #FDAB84;
     
+}
+
+#zona{
+    margin-left: -17vw;
+    position: absolute;
+    margin-top: 17.5vh;
+    color: #FDAB84;
+    border-color: #FDAB84;
+}
+
+.zona{
+    top: 17.5vh;
+    left: 1.7vw;
+    position: absolute;
+}
+
+#zona option{
+    background-color: transparent;
+    color: #FDAB84;
+    border-color: #FDAB84;
+}
+
+#mesa{
+    margin-left: -5.8vw;
+    position: absolute;
+    margin-top: 17.5vh;
+    color: #FDAB84;
+    border-color: #FDAB84;
+}
+#mesa option{
+    background-color: transparent;
+    color: #FDAB84;
+    border-color: #FDAB84;
+}
+.mesa{
+    top: 17.5vh;
+    left: 13vw;
+    position: absolute;
 }
 
 button{
@@ -151,4 +189,13 @@ button{
 }
 button:hover{
     background: #045d76;
+}
+
+
+.call{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 94vw;
+    top: 85vh;
 }
