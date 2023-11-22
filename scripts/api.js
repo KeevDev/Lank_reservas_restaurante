@@ -29,7 +29,9 @@ function actualizarYGuardarJSON() {
             var opcion = document.getElementById("opcion").value;
             var fecha = document.getElementById("fecha").value;
             var hora = document.getElementById("hora").value;
-    
+            var personalizada = document.getElementById("eventoPersonalizado").value;
+            var zona = document.getElementById("zona").value;
+            var mesa = document.getElementById("mesa").value;
             // Actualizar los valores del objeto JSON
             if (count != '' && opcion != '' && fecha != '' && hora != ''){
                 miJson.user = user;  // Cambié esto de count a user ya que parecía un error
@@ -37,7 +39,9 @@ function actualizarYGuardarJSON() {
                 miJson.tipo_reserva = opcion;
                 miJson.fecha = fecha;
                 miJson.hora = hora;
-    
+                miJson.personalizada = personalizada;
+                miJson.zona = zona;
+                miJson.mesa = mesa;
             // Convertir el objeto JSON actualizado a una cadena JSON
                 var jsonActualizado = JSON.stringify(miJson);
                 console.log(jsonActualizado);

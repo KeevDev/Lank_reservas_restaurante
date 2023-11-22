@@ -38,32 +38,32 @@
                 <div class="opciones">
                     <label for="opcion">Seleccione un tipo:</label>
                     <select id="opcion" name="opcion" required onchange="mostrarOpcionesPersonalizadas()">
-                        <option value="opcion"></option>
-                        <option value="opcion1">Sencilla</option>
-                        <option value="opcion2">Ejecutiva</option>
-                        <option value="opcion3">Personalizada</option>
+                        <option value=""></option>
+                        <option value="sencilla">Sencilla</option>
+                        <option value="ejecutiva">Ejecutiva</option>
+                        <option value="personalizada">Personalizada</option>
                     </select>
                     
-                    <select id="eventoPersonalizado" name="eventoPersonalizado" disabled="true" value="None">
-                        <option value="none"></option>
-                        <option value="cumpleanos">Cumpleaños</option>
+                    <select id="eventoPersonalizado" name="eventoPersonalizado" disabled="true" >
+                        <option value=""></option>
+                        <option value="cumpleaños">Cumpleaños</option>
                         <option value="graduacion">Graduación</option>
                     </select>
                     <p class="zona">Zona</p>
                     <select id="zona" name="zona" required>
                         <option value="opcion"></option>
-                        <option value="opcion1">Salon interior</option>
-                        <option value="opcion2">Terraza</option>
-                        <option value="opcion3">Salon exterior</option>
+                        <option value="interior">Salon interior</option>
+                        <option value="terraza">Terraza</option>
+                        <option value="exterior">Salon exterior</option>
                     </select>
                     <p class="mesa">Mesa</p>
                     <select id="mesa" name="mesa" required>
                         <option value="opcion"></option>
-                        <option value="opcion1">1</option>
-                        <option value="opcion2">2</option>
-                        <option value="opcion3">3</option>
-                        <option value="opcion4">4</option>
-                        <option value="opcion5">5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
 
                     <script>
@@ -71,7 +71,7 @@
                             var selectOpcion = document.getElementById("opcion");
                             var selectEventoPersonalizado = document.getElementById("eventoPersonalizado");
                 
-                            if (selectOpcion.value === "opcion3") {
+                            if (selectOpcion.value === "personalizada") {
                                 selectEventoPersonalizado.disabled = false;
                             } else {
                                 selectEventoPersonalizado.disabled = true;

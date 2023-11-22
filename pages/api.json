@@ -3,5 +3,8 @@
     "numero_personas" : "",
     "tipo_reserva" : "",
     "fecha": "",
-    "hora": ""
+    "hora": "",
+    "personalizada": "",
+    "zona": "",
+    "mesa": ""
 }
