@@ -1,0 +1,169 @@
+/* Header.css */
+
+.header {
+    width: 100%;
+    height: 15vh;
+    background: black;
+    border-bottom: 0.75vh solid #FDAB84;
+    z-index: 34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2vw;
+    position: fixed;
+    top: 0;
+    overflow: hidden; /* Oculta el menú desplegable cuando está cerrado */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .title {
+    color: #FDAB84;
+    font-size: 4vw;
+    font-family: 'Gideon Roman';
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1vw;
+  }
+  
+  .subtitle {
+    color: #FDAB84;
+    font-size: 2vw;
+    font-family: 'Encode Sans Expanded';
+    font-weight: 400;
+    margin: 0;
+    margin-left: 1vw;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #FDAB84;
+    cursor: pointer;
+    margin-right: 1vw;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+  }
+  
+  .nav-item {
+    margin: 0 2vw;
+    text-transform: uppercase;
+    color: #FDAB84;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+  
+  .nav-item:hover {
+    color: #C78C19;
+    font-size: 1.7vw;
+  }
+  
+  .login-img {
+    width: 4vw;
+    height: 4vw;
+    margin-bottom: 0.5vw; /* Espacio entre la imagen y el enlace */
+    transition: all 0.5s;
+  }
+  
+  .login-img:hover {
+    width: 4.4vw;
+    height: 4.4vw;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+  
+  .login-link {
+    color: #FDAB84;
+    font-size: 1vw;
+    font-family: 'Encode Sans Expanded';
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.4s;
+    font-weight: bold;
+  }
+  
+  .login-link:hover {
+    color: #C78C19;
+    font-size: 1.1vw;
+  }
+  
+  /* Menú desplegable */
+  .nav.open {
+    display: flex; /* Muestra el menú cuando está abierto en dispositivos móviles */
+  }
+  
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav {
+      display: none; /* Oculta el menú por defecto en dispositivos móviles */
+      position: absolute;
+      top: 15vh;
+      left: 0;
+      width: 100%;
+      background: black;
+      z-index: 100;
+    }
+  
+    .nav.open {
+      display: flex; /* Muestra el menú cuando está abierto */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-item {
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+  
+    .title.mobile-title {
+      font-size: 6vw; /* Tamaño más grande en dispositivos móviles */
+    }
+  
+    .subtitle.mobile-subtitle {
+      font-size: 3vw; /* Tamaño más grande en dispositivos móviles */
+    }
+  }
+  
