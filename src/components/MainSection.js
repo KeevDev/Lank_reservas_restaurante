@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';  // Importamos Link de react-router-dom
 import { motion } from 'framer-motion';
 
 const styles = {
@@ -94,23 +95,27 @@ const MainSection = () => {
         >
           Directo al paladar
         </motion.p>
-        <motion.a
-          href="pages/login.html"
-          style={{
-            ...styles.boton,
-            ...(isHovered ? styles.botonHover : {}),
-          }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+        <motion.div
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.05, boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)' }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
-          <p style={styles.textoBoton}>RESERVA YA</p>
-        </motion.a>
+          <Link
+            to="/login"
+            style={{
+              ...styles.boton,
+              ...(isHovered ? styles.botonHover : {}),
+            }}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <p style={styles.textoBoton}>RESERVA YA</p>
+          </Link>
+        </motion.div>
       </motion.div>
     </main>
   );
 };
 
 export default MainSection;
+

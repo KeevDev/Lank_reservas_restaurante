@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 // Definición de elementos de navegación
-const navItems = ['Inicio', 'Nosotros', 'Chef', 'Menú', 'Contacto'];
+const navItems = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Menú', path: '/menu' },
+  { name: 'Chef', path: '/chef' },
+  { name: 'Nosotros', path: '/about' },
+  { name: 'Contacto', path: '/contact' },
+];
 
 // Hook personalizado para obtener el tamaño de la ventana
 function useWindowSize() {
@@ -84,14 +91,14 @@ const HeaderComponent = () => {
     menuIcon: {
       display: isMobile ? 'flex' : 'none',
       alignItems: 'center',
-      justifyContent: 'flex-end', // Alinea el icono a la derecha
+      justifyContent: 'flex-end',
       fontSize: '2rem',
       color: '#FDAB84',
       cursor: 'pointer',
-      position: 'absolute', // Posiciona el icono de forma absoluta
-      right: '5vw', // Espacio desde la derecha
-      top: '50%', // Posiciona el icono en el medio vertical
-      transform: 'translateY(-50%)', // Centra verticalmente el icono
+      position: 'absolute',
+      right: '5vw',
+      top: '50%',
+      transform: 'translateY(-50%)',
     },
     navLoginContainer: {
       display: 'flex',
@@ -109,7 +116,7 @@ const HeaderComponent = () => {
       padding: 0,
       margin: 0,
     },
-    navItem: (isHovered) => ({
+    navItem: (isActive, isHovered) => ({
       padding: '0.5rem 1rem',
       fontWeight: 'bold',
       fontSize: isHovered ? '1.6rem' : '1.4rem',
@@ -117,16 +124,17 @@ const HeaderComponent = () => {
       transition: 'color 0.3s ease, font-size 0.3s ease',
       cursor: 'pointer',
       margin: 10,
+      color: isActive ? '#C78C19' : '#FDAB84', // Cambia el color si el ítem está activo
     }),
     link: {
-      color: '#FDAB84', // Asegura que el color de los enlaces sea #FDAB84
+      color: 'inherit', // Hereda el color del ítem de navegación
       textDecoration: 'none',
     },
     loginContainer: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      marginLeft: 'auto', // Empuja el loginContainer a la derecha
+      marginLeft: 'auto',
       marginBottom: isMobile ? '6vw' : 0,
       marginTop: isMobile ? '2vh' : 0,
     },
@@ -150,10 +158,10 @@ const HeaderComponent = () => {
   return (
     <header style={styles.header}>
       <div style={styles.logoContainer}>
-        <a href="index.html" style={{ textDecoration: 'none' }}>
+        <NavLink to="/" style={{ textDecoration: 'none' }}>
           <h1 style={styles.title}>LANK</h1>
           <h2 style={styles.subtitle}>RESTAURANTE</h2>
-        </a>
+        </NavLink>
       </div>
 
       {/* Icono del menú en vista móvil */}
@@ -170,13 +178,17 @@ const HeaderComponent = () => {
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  style={styles.navItem(hoveredNavItem === index)}
+                  style={styles.navItem(window.location.pathname === item.path, hoveredNavItem === index)}
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <a href={`#${item.toLowerCase()}`} style={styles.link}>
-                    {item}
-                  </a>
+                  <NavLink 
+                    to={item.path} 
+                    style={styles.link}
+                    isActive={(match, location) => location.pathname === item.path} // Verifica si el enlace está activo
+                  >
+                    {item.name}
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -186,7 +198,7 @@ const HeaderComponent = () => {
         {/* Login para PC */}
         {!isMobile && (
           <div style={styles.loginContainer}>
-            <a href="pages/login.html">
+            <NavLink to="/login">
               <motion.img
                 id="login-img"
                 src="/user.png"
@@ -196,9 +208,9 @@ const HeaderComponent = () => {
                 whileHover={{ scale: 1.1, rotate: 10 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               />
-            </a>
-            <a
-              href="pages/login.html"
+            </NavLink>
+            <NavLink
+              to="/login"
               style={styles.loginLink(hoveredNavItem === 'login')}
               onMouseEnter={() => setHoveredNavItem('login')}
               onMouseLeave={() => setHoveredNavItem(null)}
@@ -210,68 +222,35 @@ const HeaderComponent = () => {
               >
                 LOGIN
               </motion.span>
-            </a>
+            </NavLink>
           </div>
         )}
-      </div>
 
-      {/* Navegación y Login para dispositivos móviles */}
-      {isMobile && (
-        <nav
-          style={{
-            ...styles.nav,
-            position: 'absolute',
-            top: '15vh',
-            left: 0,
-            width: '100%',
-            backgroundColor: 'black',
-            display: isMenuOpen ? 'block' : 'none',
-          }}
-        >
-          <div style={styles.loginContainer}>
-            <a href="about.js">
-              <motion.img
-                id="login-img"
-                src="/user.png"
-                alt="User Login"
-                style={styles.loginImg}
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.1, rotate: 10 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              />
-            </a>
-            <a
-              href="pages/login.html"
-              style={styles.loginLink(hoveredNavItem === 'login')}
-              onMouseEnter={() => setHoveredNavItem('login')}
-              onMouseLeave={() => setHoveredNavItem(null)}
-            >
-              <motion.span
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.1, color: '#C78C19' }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                LOGIN
-              </motion.span>
-            </a>
-          </div>
-          <ul style={styles.navList}>
-            {navItems.map((item, index) => (
-              <li
-                key={index}
-                style={styles.navItem(hoveredNavItem === index)}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-                onClick={() => setMenuOpen(false)} // Cierra el menú al hacer clic
-              >
-                <a href={`#${item.toLowerCase()}`} style={styles.link}>
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+        {/* Menú desplegable para móvil */}
+        {isMobile && isMenuOpen && (
+          <nav style={{ ...styles.nav, flexDirection: 'column', position: 'absolute', top: '15vh', right: 0, backgroundColor: 'black', padding: '1rem' }}>
+            <ul style={styles.navList}>
+              {navItems.map((item, index) => (
+                <li
+                  key={index}
+                  style={styles.navItem(window.location.pathname === item.path, hoveredNavItem === index)}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={() => setMenuOpen(false)} // Cierra el menú después de seleccionar una opción
+                >
+                  <NavLink 
+                    to={item.path} 
+                    style={styles.link}
+                    isActive={(match, location) => location.pathname === item.path} // Verifica si el enlace está activo
+                  >
+                    {item.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+      </div>
     </header>
   );
 };

@@ -1,0 +1,56 @@
+/* Estilos personalizados para react-datepicker */
+.react-datepicker__input-container {
+    width: 100%;
+  }
+  
+  .react-datepicker__input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 0.125rem solid #FDAB84;
+    border-radius: 0.375rem;
+    background: transparent;
+    color: #FDAB84;
+    font-size: 0.9rem;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
+  }
+  
+  .react-datepicker__header {
+    background-color: #003746;
+    color: #FDAB84;
+    border-bottom: 0.125rem solid #FDAB84;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #FDAB84;
+    color: #003746;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: #FDAB84;
+    color: #003746;
+  }
+  
+  .react-datepicker__month-container {
+    background-color: #111;
+  }
+  
+  .react-datepicker__day {
+    color: #FDAB84;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: #045d76;
+    color: #FDAB84;
+  }
+  
+  /* Ajusta el contenedor del calendario para que tenga un tamaño consistente */
+  .react-datepicker__month {
+    border-radius: 0.375rem;
+    box-shadow: 0px 0.3rem 1rem rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Opcional: Ajusta el tamaño del calendario para que se alinee mejor */
+  .react-datepicker {
+    font-size: 0.9rem; /* Ajusta el tamaño de fuente del calendario */
+  }
+  
